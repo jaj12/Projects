@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {I}Literature Review}{1}{}%
+\contentsline {section}{\numberline {II}Dynamic Model}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {II-A}}Transfer Function}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {II-B}}Block Diagram}{1}{}%
+\contentsline {section}{\numberline {III}Analysis}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {III-A}}Open Loop Analysis}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {III-B}}Time Domain Analysis}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {III-C}}Frequency Domain Analysis}{1}{}%
+\contentsline {section}{\numberline {IV}Design Alternatives}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Proportional Controller}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-B}}PI Controller}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-C}}PD Controller}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-D}}PID Controller}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-E}}Compensators}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-F}}Analysis of Closed Loop System's Performance}{1}{}%
+\contentsline {section}{\numberline {V}Final Design}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {V-A}}Rejecting Disturbances}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {V-B}}Track Ramp Inputs}{1}{}%
+\contentsline {section}{\numberline {VI}Extra Credit}{1}{}%
+\contentsline {section}{\numberline {VII}Appendix}{1}{}%
+\contentsline {section}{References}{2}{}%

@@ -1,0 +1,980 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+
+\title{Robotic Arm Position Control Project}
+
+\author{\IEEEauthorblockN{Aya Sabe Ayoun}
+\IEEEauthorblockA{\textit{Mechanical Engineering Student} \\
+\textit{American University of Beirut}\\
+Beirut, Lebanon \\
+aws08@mail.aub.edu}
+\and
+\IEEEauthorblockN{Jad Bhamdouni}
+\IEEEauthorblockA{\textit{Mechanical Engineering Student} \\
+\textit{American University of Beirut}\\
+Beirut, Lebanon \\
+jnb21@mail.aub.edu}
+\and
+\IEEEauthorblockN{Jihad Jundi}
+\IEEEauthorblockA{\textit{Mechanical Engineering Student} \\
+\textit{American University of Beirut}\\
+Beirut, Lebanon\\
+jaj12@mail.aub.edu}
+
+}
+
+\maketitle
+\begin{abstract}
+%In this project, the different controllers and compensators capable of controlling the position of the robotics hand are studied by checking if they satisfy the customer’s performance specifications. Several controllers and compensators are designed which consist of a proportional controller, two PD controllers, a PID controller, and 2 lead compensators. The analysis in time and frequency domain of the response of each controller and compensator designed is implemented with the addition of a disturbance signal to check for'...'. After comparing several performance characteristics and stability along with the cost, the second lead compensator is chosen as the recommended design. To get a feel of the design, a physical model is built to compare the experimental results with the simulated ones.
+In this project, different controllers and compensators are studied for controlling the position of a one-DOF robotic arm by targeting certain pre-determined performance requirements. The designs include proprtional, PD, and PID controllers as well as two lead compensators. Time-domain and frequency-domain analysis of simulations to different inputs are implemented, and the system's ability to reject disturbance is also studied. After evaluating the response of all the designs, one of the two lead compensators is chosen as the recommended one. An incomplete physical model of the closed-loop system is built to validate simulation results.
+\end{abstract}
+
+%\begin{IEEEkeywords}
+%component, formatting, style, styling, insert
+%\end{IEEEkeywords}
+
+\section{Literature Review}
+The DC motor has been one of most widely used motors due to its speed control qualities, even though its maintenance is more costly than the induction motor. Consequently, research into position control has been widely studied over the past few decades. The main controllers that have been used to control the position and speed of the DC motor are Proportional-Integral Derivative Controllers.
+\\
+\\
+In a study by Thomas et al., the DC motor was a “shunt motor”, where the coil is in parallel with the voltage source instead of in series; this results in the current across the coil and across the armature to be different. This changes the model’s equations and consequently the transfer function, but it remains a type 1 3rd order system. Thomas et al. attempted to design the position controller as a PID using Ziegler-Nichols Method and proceeded to tune it using what they call “Genetic Algorithm Approach(GA)”. GA is an efficient optimization technique used to solve problems. Based on the results obtained, the GA tuned Position PID Controller has much better performance characteristics than a PID tuned using a classical method validated by simulation on MATLAB\cite{Thomas09}. 
+\\
+\\
+Maung et al. used a 12 V Namiki DC motor with a metal gearbox and an integrated quadrature encoder to measure the motor’s speed and position for the output shaft\cite{Maung18}. It should be mentioned that the torque generated at the output shaft of a DC motor can be scaled with the use of gear trains \cite{Paul16}.Hence, high torque position and low speed can be obtained with the use of a geared DC motor providing a feedback loop. Bi-directional motor control is possible to obtain with the use of an L298 H-Bridge module with pulse-width modulation (PWM) from an Arduino micro-controller. It should noted that L298 H-Bridge module can only be utilized for motors of a voltage between 5 and 35V DC with a peak current up to 2A.
+\\
+\\
+ Maung et al. introduced Coulomb’s friction force on the driving velocity for the model used to design their controller, which resulted in better performance characteristics of the desired position validated through experimental results\cite{Maung18}.
+\\
+\\
+For Akbar et al., PID controllers of a DC servo motor are designed using automated PID tuning by sisotool for higher order systems using Simulink, to control a robot arm manipulator model. They also used fuzzy logic control (FLC) to control the movement of the robot arm and ensure its smooth precise movement \cite{Akbar14}.
+\\
+\\
+After performing simulations, they concluded that FLC showed better performance in terms of stability, precision, overshoot, and response speed. The problem with the PID controller is the high overshoot. FLC eliminated these undesired oscillations and provided a smooth transient response\cite{Akbar14}.
+\\
+\\
+Zhang et al. designed active and energy regenerative controllers for DC motor base suspension specifically in cars, where they can operate in two ways: active control that assures comfort during the ride and the energy regenerative control that takes advantage of the vibrations considering them an energy source. To achieve this, they used a torque tracking loop control consisting of DC motor, a three-phase inverter, a rotor position detector, current sensors, and a DC power supply. A rotary DC motor was used as an actuator and applied the rack and pinion mechanism to convert the rotary motion of the DC motor into linear motion of the suspensions, with the addition of an electromagnetic damper. A hysteresis current controller was used to control the current by comparing the current error with the hysteresis bandwidth. For the main loop controller design, they used an H infinity control strategy to achieve stabilization with the guaranteed performance. It consisted of two controllers, an H infinity robust for active suspension based on full car suspension model and a restricted H infinity which restricts the motor to work in certain areas of energy regeneration\cite{Zhang12}. 
+\\
+\\
+ Namazov et al. designed a fuzzy control system to control the position of a DC motor. A proportional derivative fuzzy controller (FPD) and a PID controller were used. The PID controller was tuned using hand tuning or Ziegler Nicholas, where they concluded that the Ziegler Nicholas method gives poor results for systems with very high time lag and that hand tuning would take a long time to find the values desired. A PD controller was also designed and tuned using Signal Constraint block of Simulink Response Optimization Toolbox which was used to determine the parameter values of a linear FPD\cite{Namazov10}.
+\\
+\\
+Defuzzification was applied to the controller to obtain a certain output value, where SOM defuzzification gave the best results. Upon introducing the system to a disturbance, the FPD controller rejected it without the need to tune it, unlike the PD controller that wasn’t able to do so\cite{Namazov10}.
+
+Previous work has been done on controlling a one-degree robotic arm, where the employed DC motor was mathematically modeled and its transfer function relating angular position and voltage was derived. A simple proportional controller was able to meet the desired requirements \cite{Aung08}, but it is worthy to note that these requirements were quite loose, particularly when compared to the ones imposed in our study.
+\\
+\\
+Other researchers have implemented different approaches to obtain satisfying results for controlling the angular position of a DC motor, including state feedback pole placement, Fuzzy Logic, Multi-Layer Perceptron (MLP) Neural Network, and the conventional PID \cite{Ali16}, where very similar output responses were obtained across all controllers and with the main differences residing in the transient phase. It was found that PID’s resulted in the fastest response but at the expense of a small overshoot. One drawback of this type of controller is the need of the mathematical transfer function of the system, which is not always available with a satisfying degree of accuracy, as opposed to Fuzzy logic controllers which only rely on prior knowledge about the system. 
+\\
+\\
+Chowdhury et al. adopted four controllers, including phase-lag, phase-lead, PI and PID, achieving a phase margin of 40 degrees, and were digitally implemented in MATLAB. Assessment of their respective performances was conducted using Bode plots for the compensated open-loop system and by studying the step response characteristics of the closed-loop system. It was found that all controllers resulted in zero steady state error, with the phase-lead and phase-lag resulting also in zero overshoot, and the PID and phase-lead controllers showing the lowest rise time and lowest settling time respectively.\cite{Chowdhury19}
+\section{Dynamic Model}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{FBD}
+	\label{fig:FBD}
+	\caption{Free Body Diagram \& Circuit}
+\end{figure}
+Assumptions:
+$K_m=K_b=K$
+
+Kirchhoff's Law was applied on the circuit and Moment Conservation on the Motor:
+\begin{equation}
+V=L \frac{di}{dt} +Ri+K \dot{\theta}_m
+	\label{eq:1}
+\end{equation}
+\begin{equation}
+	\tau_m=J_m \ddot{\theta}_m+b\dot{\theta}_m
+	\label{eq:2}
+\end{equation}
+\begin{equation}
+	\tau_L=J_L \ddot{\theta}
+	\label{eq:4}
+\end{equation}
+Due to the gears between  the motor and the load:
+\begin{equation}
+	\tau_{total}=n \tau_L +\tau_m=Ki	
+\end{equation}
+
+\begin{equation}
+	\frac{1}{n}(J_m \ddot{\theta}+b \dot{\theta})=\tau_m
+	\label{eq:5}
+\end{equation}
+\begin{equation}
+	n(J_L\ddot{\theta})=n\tau_L
+	\label{eq:6}
+\end{equation}
+\subsection{State Space Representation}\label{AA}
+The state variables are defined to be:
+\begin{gather}
+	X=
+	\begin{bmatrix}
+		\ddot{\theta} \\
+		\dot{\theta} \\
+		\theta \\
+	\end{bmatrix}
+\end{gather}
+and output variable to be:
+\begin{gather}
+	Y=
+	\begin{bmatrix}
+		\theta
+	\end{bmatrix}
+\end{gather}
+From Equations (\ref{eq:1}), (\ref{eq:2}), and (\ref{eq:4}),  obtain: 
+\begin{equation}
+	\dddot{\theta}=-162.4945\ddot{\theta}-430.2938\dot{\theta}+1.633V
+\end{equation}
+Leading to:
+\begin{gather}
+	\dot{X}
+	=
+	\begin{bmatrix}
+		-162.4945  &-430.2938 & 0\\
+		1 &     0    &0 \\
+		0 & 1 & 0\\
+	\end{bmatrix}
+	X+
+	\begin{bmatrix}
+		1.633 \\
+		0  \\
+		0 \\
+	\end{bmatrix}
+	V
+\end{gather}
+\begin{gather}
+	Y
+	=
+	\begin{bmatrix}
+		0  &0 & 1\\
+	\end{bmatrix}
+	X+
+	\begin{bmatrix}
+		0 \\
+		0  \\
+		0 \\
+	\end{bmatrix}
+	V
+\end{gather}
+
+\subsection{Transfer Function}\label{AA}
+(\ref{eq:5}) and (\ref{eq:6}) are replaced in  (\ref{eq:4}) and obtain after simplification:\\
+For position output:
+\begin{equation}
+	\label{eqn:transfer}
+	G(s)=\frac{\theta}{V}=\frac{K n}{(L J_o)s^3+(L b+RJ_o)s^2+(R b+K^2)s}
+\end{equation}
+\begin{equation}
+	G(s)=\frac{\theta}{V}=\frac{0.003333}{0.002004s^3+0.3257s^2+0.8625s}
+\end{equation}
+For velocity output:
+\begin{equation}
+	\label{eqn:transferv}
+	\frac{\omega}{V}=\frac{K n}{(L J_o)s^2+(L b+R J_o)s+(R b+K^2)}
+\end{equation}
+Where $J_o=Jm+(n^2)J_L$ and $n=n_m/n_L$
+\begin{table}[h]
+	\center
+	\begin{tabular}{ |c|c|c| } 
+	\hline
+	Parameter & Values & Unit  \\
+	\hline
+	$J_m$ & $0.04$ & $kg.m^2$  \\ 
+	$J_L$ & $0.5$ & $kg.m^2$  \\ 
+	$b$ & $0.1$ & $kg.m^2/s$  \\ 
+	$K$ & $0.25$ & $N.m/A$  \\ 
+	$R$ & $8$ & $\Omega$  \\ 
+	$L$ & $0.05$ & $H$  \\ 
+	$n$ & $1/75$ & $-$  \\ 
+	$\eta$ & $100\%$ & $-$  \\ 
+	\hline
+	\end{tabular}
+	\label{table:parameters}
+	\caption{Parameters}
+\end{table}
+Our open loop system's Block diagram is shown in Figure(\ref{fig:BlockDiagram}).
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+	\includegraphics[width=1\textwidth]{Blockdiagram}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+	\includegraphics[width=1\textwidth]{BlockdiagramSimplified}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+\includegraphics[width=1\textwidth]{BlockdiagramGeneral}
+\end{subfigure}
+	\caption{Block Diagram Variations for Closed Loop System}
+	\label{fig:BlockDiagram}
+\end{figure}
+\section{Analysis}
+First, the performance specifications required by the customer need to be established.
+The desired position of the arm is $50^{\circ}$, which is our ideal steady state value.
+\\ 
+It needs to be reached in $1s$, so our desired rise time is $1s$.
+\\
+It needs to stop within $\pm 1^{\circ}$ in the span of $2s$, so our maximum steady state error is $2\%$ and our settling time is $2s$
+\\
+Work pieces would not fit if it stops $\pm 2^{\circ}$ from its desired position.
+\\
+In summary, the following specifications are obtained in Equation (\ref{eqn:spec}):
+\large
+\begin{equation}
+	\label{eqn:spec}
+	\begin{cases}
+		\theta_{desired}=50^{\circ}\\
+		t_r\leq1s\\
+		t_s\leq2s\\
+		error_{ss}\leq2\%\\
+		PO\leq4\%
+	\end{cases}       
+\end{equation}
+\normalsize
+It should be noted that the 100\% criteria for rise time and 2\% tolerance band for settling time are used.
+	
+\subsection{Open Loop Analysis}\label{AA}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.45\textwidth]{Openloop_Position}
+	\caption{Open Loop System Position Response for Unit Step input}
+	\label{fig:OLP}
+\end{figure}
+The Position open-loop system is a type 1, 3rd order system, while the Velocity open-loop system is a type 0, 2nd order system. This drives us to expect that the position open-loop response will be marginally stable due to the pole at s=0 and that the velocity response will be stable if its 2 poles are negative.
+
+The Open-Loop System Step Response of Position is a straight line increasing with time as seen in Figure(\ref{fig:OLP}). This is expected, since the input into the DC motor is a constant voltage of $1V$.So, the velocity is going to reach steady state. This results in the position increasing linearly. This means the overshoot, settling time, and steady state error of this step response for position cannot be studied, since it is unstable.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Openloop_Velocity}
+	\caption{Open Loop System Step Response for Velocity}
+	\label{fig:OLV}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{BodeMargin_Openloop}
+	\caption{Phase and Gain Margins using Bode Plot For Openloop}
+	\label{fig:Margin_Openloop}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Nyquist_Openloop}
+	\caption{Nyquist Plot For Openloop}
+	\label{fig:Nyquist_Openloop}
+\end{figure}
+
+As it was expected from our analysis of the position response to our Open-Loop system, the velocity step response reaches steady state stability at 2.5 seconds. The velocity response looks like a first order system response. So, the system happens to be critically or over damped. It is calculated and found that truly $\zeta=1$, which indicates that the system is critically-damped explaining this step response. For velocity Step Response it is found that:
+\begin{equation}
+	\begin{cases}
+		t_r=0.816 s\\
+		t_s=1.4592 s\\
+	\end{cases}       
+\end{equation}
+	The steady state error for the velocity Open-Loop Response cannot be discussed, since the input and output are of different units, and the desired value of velocity is unknown.
+
+\section{Design Alternatives}
+Before going into design criteria, establishing the performance specifications is needed. Since a maximum overshoot of $4\%$ along with a settling of $t_s=2s$ and a rise time of $t_r=1s$ and a steady state error of $2\%$.
+
+To achieve these performance specifications, assuming the system as a 2nd order, the required damping and natural frequency are:
+
+\begin{equation}
+	\begin{cases}
+		\zeta \geq 0.7156\\
+		\omega_n \geq 2.7947
+	\end{cases}       
+\end{equation}
+
+Resulting with our desired closed loop poles to be at:
+\small
+\begin{equation}
+		S_{1,2}= 
+	\begin{cases}
+	-\zeta \omega_n \pm \sqrt{1-\zeta^2}j & \zeta \leq 1\\
+	-\zeta \omega_n \pm \sqrt{\zeta^2-1}j & \zeta > 1\\
+	\end{cases}
+\end{equation}
+\normalsize
+the threshold desired closed-loop poles are:
+\small
+\begin{equation}
+	S_{1,2}= -2 \pm 1.952j
+\label{eq:des}
+\end{equation}
+\normalsize
+
+Something to be noted is that a linear control system is being dealt with, therefore the closed loop system response for a unit step input will be linear correlated to any other step input. In our analysis, a unit step input is used to facilitate our design process. However, it is noted that our input should be $50^{\circ}$.
+\\
+It is assumed that unity feedback will be used and the encoder will give the position value in the same units as that needed to be inputted.
+
+\subsection{Proportional Controller}\label{AA}
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.23\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Rootlocus_Openloop}
+		\end{subfigure}
+	\hfill
+		\begin{subfigure}{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Rootlocus_OpenloopZ}
+	\end{subfigure}
+	\caption{Root Locus of Openloop}
+	\label{fig:RLOP}
+\end{figure}
+It is observed that one of the 3 open loop poles is more than 10 times greater than the other two, so it can be neglected and assumed to act like a second order system.
+
+It is also observed that the region that it is allowed to pick gains for our desired poles doesn't include the Root locus; however, it can at least satisfy  the damping ratio $\zeta=0.716$. The obtained gain and closed loop poles are:
+
+\begin{equation}
+	\begin{cases}
+		K=333.93 \\
+		S_{1,2}=-1.34 \pm 1.3j\\
+		S_3=-159.82
+	\end{cases}
+\end{equation}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Closedloop_Pcontrol}
+	\caption{Step Response for Closed loop Position Proportional Controller}
+	\label{fig:Pstep}
+\end{figure}
+
+The performance of the closed loop using this Proportional Controller is:
+\begin{equation}
+	\begin{cases}
+		t_r=1.85 s \\
+		t_s=3.19 s\\
+		PO=3.9735 \%\\
+		error_{ss}=0.16\%
+	\end{cases}
+\end{equation}
+It can be seen that all of the performance criteria are met except for the settling time. For the entire range of gains, a satisfactory settling time cannot be obtained. Therefore, a proportional controller isn't enough and other options need to be investigated.
+\\
+It should be noted that the steady state error is almost zero, which is expected since the open-loop is type 1.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{BodeMargin_P}
+	\caption{Phase and Gain Margins using Bode Plot For P controller}
+	\label{fig:MarginP}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Nyquist_P}
+	\caption{Nyquist Plot For P controller}
+	\label{fig:Nyquist_P}
+\end{figure}
+It can be observed in Figure(\ref{fig:MarginP}) that our Gain margin $G_m= 42 dB$ at $w=20.7 rad/s$ and our Phase margin $P_m=65.9^\circ$ at $w=1.18 rad/s$. The cutoff frequency is found to be at $w_b=1.57 rad/s$.
+\subsection{PI Controller}
+
+For the PI controller, a pole at s=0 is added, and the angle of deficiency to get our desired closed loop poles is evaluated and obtained to be $\phi=162.5635^{\circ}$. Using angle of deficiency method, the zero at s=4.2149 is obtained, which results in an unstable closed loop pole. Hence, a PI controller cannot be used to obtain our desired poles. This is expected, since PIs are only used to eliminate steady state error and not to improve settling time or maximum overshoot. 
+
+\subsection{PD Controller}
+
+Knowing that a PD controller is used to control the transient response of a system, high hopes exist for improving the overshoot, rise time ,and settling time using it.
+\\
+The angle of deficiency can be calculated to be $\phi=26.8673^{\circ}$ and place our zero at s= -5.853.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.23\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Rootlocus_PD1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Rootlocus_PD1z}
+	\end{subfigure}
+	\caption{Root Locus PD Controlled Openloop}
+	\label{fig:RLPD}
+\end{figure}
+One of the open loop poles is more than 10 times greater than the other two, so it can be assumed the system to behave like a 2nd order.
+\\
+The threshold desired closed-loop poles Equation(\ref{eq:des}) are chosen, and they intersect with the Root locus due to our PD controller. The gain and closed loop poles obtained are:
+\begin{equation}
+	\begin{cases}
+		K=127.0095 \\
+		S_{1,2}=-2 \pm 1.952j\\
+		S_3=-158.5
+	\end{cases}
+\end{equation}
+So, the transfer function of this controller is:
+\begin{equation}
+	PD_1(s)=127.0095(5.853+s)
+	\label{eq:PD1}
+\end{equation}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Closedloop_PD1control}
+	\caption{Step Response for Closed loop Position PD1 Controller}
+	\label{fig:PDstep}
+\end{figure}
+
+The performance of the closed loop using this PD Controller is:
+\begin{equation}
+	\begin{cases}
+		t_r=0.974 s \\
+		t_s=1.9656 s\\
+		PO=4.7337\%\\
+		error_{ss}=0.18\%
+	\end{cases}
+\end{equation}
+
+It can be observed that all performance criteria are acceptable except for the Maximum overshoot. To decrease the maximum overshoot, the damping ratio and our natural frequency will be increased to $\zeta=0.75$ and $\omega=3$ respectively, which makes the desired poles:
+\begin{equation}
+	S_{1,2}= -2\pm 1.82j
+	\label{eq:desnew}
+\end{equation}
+Following the same steps done for the first PD controller, but for the poles in Equation(\ref{eq:desnew}),an open-loop zero at s=-4.9087 will be added,and the obtained gain and closed loop poles are:
+
+\begin{equation}
+	\begin{cases}
+		K=174.2554 \\
+		S_{1,2}=-2.25 \pm 1.98j\\
+		S_3=-157.99
+	\end{cases}
+\end{equation}
+So, the transfer function of this controller is:
+\begin{equation}
+	PD_2(s)=174.2554(4.9087+s)
+	\label{eq:PD2}
+\end{equation}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Closedloop_PD2control}
+	\caption{Step Response for Closed loop Position PD2 Controller}
+	\label{fig:PDstep}
+\end{figure}
+and our performance is:
+\begin{equation}
+	\begin{cases}
+		t_r=0.898 s \\
+		t_s=1.7514 s\\
+		PO=3.9684\%\\
+		error_{ss}=0.016\%
+	\end{cases}
+\label{eq:28}
+\end{equation}
+All our performance specification are met by using PD2 controller, making it a good candidate to consider.
+\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{PD2_Ramp}
+	\caption{Ramp Response for Closed loop Position PD2 Controller}
+	\label{fig:PDramp}
+\end{figure}
+
+The system was also simulated for a unity ramp input and it was obtained that the steady state error is $30.256\%$ as shown in Figure(\ref{fig:PDramp}).
+for $R(s)=\frac{1}{s^2}$
+
+	\begin{flalign*}
+		\label{eq:ramppd2}
+		e_{ss} &	= \lim_{s \to 0}  \frac{sR(s)}{1+PD_2(s)* G(s)}\\
+		&	=\lim_{s \to 0} \frac{1}{s+sPD_2(s)* G(s)}\\
+		&	=\lim_{s \to 0} \frac{0.002004 s + 0.3257 s + 0.8625}{0.002004 s^3 + 0.3257 s^2 + 0.8625 s+0.5809 s + 2.851}\\
+		&	=\frac{0.8625}{2.851}\\
+		&	=0.3025
+	\end{flalign*}
+As seen above, the analytical calculation of the error agrees with our simulation findings of a steady state error of 30.25\%
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{BodeMargin_PD}
+	\caption{Phase and Gain Margins using Bode Plot For PD2 controller}
+	\label{fig:MarginPD2}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Nyquist_PD2}
+	\caption{Nyquist Plot For PD2 controller}
+	\label{fig:Nyquist_PD2}
+\end{figure}
+
+It can be observed in Figure(\ref{fig:MarginPD2}) that our gain margin is $G_m= \inf dB$ at $w=\inf rad/s$ and our phase margin is $P_m=72.8^\circ$ at $w=2.67 rad/s$. It was also found that the cutoff frequency to be at $w_b=3.5 rad/s$
+
+\subsection{PID Controller}
+Knowing that PID controller are used to tackle both the transient and steady state response, it is expected that it will be able to give us our desired performance. To design this controller, an open-loop at s=0 and an open loop zero at s=-5 are added, and the angle of deficiency is calculated to be $\phi=129.5^{\circ}$. The 2nd open loop zero is calculated to be at s=-0.3902.
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.23\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Rootlocus_PID}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Rootlocus_PIDz}
+	\end{subfigure}
+	\caption{Root Locus PID Controlled Openloop}
+	\label{fig:RLPID}
+	\end{figure}
+
+
+
+The threshold desired closed-loop poles in Equation(\ref{eq:des}) were picked, which intersect with the Root locus due to our PID controller. The gain and closed loop poles obtained are:
+\begin{equation}
+	\begin{cases}
+		K=169.8302 \\
+		S_{1,2}=-2 \pm 1.95j\\
+		S_3=-158.5\\
+		S_4=-0.45
+	\end{cases}
+\end{equation}
+So, the transfer function of this controller is:
+\begin{equation}
+	PID(s)=\frac{169.83(5+s)(0.3902+s)}{s}
+\end{equation}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{Closedloop_PIDcontrol}
+		\caption{Step Response for Closed loop Position PID Controller}
+		\label{fig:PIDstep}
+	\end{figure}
+
+and the performance of our system with this PID is:
+\begin{equation}
+	\begin{cases}
+		t_r=0.5226 s \\
+		t_s=4.7085 s\\
+		PO=15.3078\%\\
+		error_{ss}=0.3\%
+	\end{cases}
+\end{equation}
+It can be seen that the settling time and the overshoot is too high. Even the steady state error is greater than that in the PD controller. This is expected, since a pole at s=-0.45 is present, which slows down the system a lot. No matter, how the magnitude of the gain selected, there will always be a pole that is very close to the imaginary axis. So, the PID will always be slow and will not be able to reach our desired settling time.
+\\
+If the first zero is selected to be at s=0, the PID controller will cancel out a pole and add another at s=0, resulting in the same transfer function for the PID as that of the PD in Equation(\ref{eq:PD1}).
+\\ 
+If our initial zero is taken between our 2 open loop pole s=0 and s=-2.6927, an open-loop zero in the right half plane will be added by the PID, which results in an unstable closed loop system for all gain K. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{PID_Ramp}
+	\caption{Ramp Response for Closed loop Position PID Controller}
+	\label{fig:rampPID}
+\end{figure}
+
+It can be seen in Figure(\ref{fig:rampPID}) that the steady state error for a unit ramp input is 0, this is expected since the system is a type 2 system.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{PID_Parabola}
+	\caption{Parabola Response for Closed loop Position PID Controller}
+	\label{fig:PIDParabola}
+\end{figure}
+\\
+\\
+The system is also simulated for a unity parabola input ,and the steady state error is obtained to be 156.25\% as shown in Figure(\ref{fig:PIDParabola}).
+for $R(s)=\frac{2}{s^3}$
+
+\begin{flalign*}
+	\label{eq:parabolaPID}
+	e_{ss} &	= \lim_{s \to 0}  \frac{sR(s)}{1+PID(s)* G(s)}\\
+	&	=\lim_{s \to 0} \frac{2}{s^2+s^2PID(s)* G(s)}\\
+	&	=\frac{1.7250}{1.104}\\
+	&	=1.5625
+\end{flalign*}
+As shown above, the analytical calculation of the error agrees with our simulation findings of a steady state error of 156.25\%.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{BodeMargin_PID}
+	\caption{Phase and Gain Margins using Bode Plot For PID controller}
+	\label{fig:MarginPID}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Nyquist_PID}
+	\caption{Nyquist Plot For PID controller}
+	\label{fig:Nyquist_PID}
+\end{figure}
+It can be observed in Figure(\ref{fig:MarginPID}) that our Gain margin $G_m= \inf dB$ at $w=\inf rad/s$ and our Phase margin $P_m=64.1^\circ$ at $w=2.67 rad/s$. The cutoff frequency is found to be at $w_b=3.5 rad/s$.
+
+\subsection{Lead Compensators}
+Knowing that a Lead compensator is used to control the transient response of a system, it is expected to decrease our settling time and overshoot.
+\\
+\subsubsection{Time Domain Design}
+An open loop zero is placed on top of one of the already existing poles at s=-2.6927. Afterwards, the angle of deficiency is calculated to be $\phi=43.5952^\circ$, consequently obtaining an open pole at s=-4.0501.
+\\
+%place rootlocus plot here
+One of the poles is more than 10 times greater than the other 3, so it can be neglected. One of the other 3 is negated by the zero we placed using our lead controller. Hence, we can assume the system to behave like a 2nd order.
+\\
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Rootlocus_Lead1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Rootlocus_Lead1z}
+	\end{subfigure}
+	\caption{Root Locus Lead Compensator Openloop}
+\end{figure}
+The threshold desired closedloop poles from Equation(\ref{eq:des}) are selected, which interest with the Root locus due to our Lead Compensator. The gain and closed loop poles are obtained to be:
+\begin{equation}
+	\begin{cases}
+		K=750.3234 \\
+		S_{1,2}=-2 \pm 1.95j\\
+		S_3=-159.85\\
+		S_4=-2.69
+	\end{cases}
+\end{equation}
+So, the transfer function of our lead compensator is:
+\begin{equation}
+Lead_1(s)=\frac{750.3234(2.6927+s)}{4.0501+s}
+\end{equation}
+and the achieved performance of our system with this Lead compensator is:
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Closedloop_Lead1}
+	\caption{Step Response for Closed loop Position Lead1 Compensation}
+\end{figure}
+\begin{equation}
+	\begin{cases}
+		t_r=1.22 s \\
+		t_s=2.1312 s\\
+		PO=3.9913\%\\
+		error_{ss}=0.16\%
+	\end{cases}
+\end{equation}
+It can be seen that the rise time and settling time are too high for us, This might be due to the pole at s=-2.69, which is relatively close to the imaginary axis, slowing down the response. To decrease the settling and rise time, our natural frequency will be increased to $w=4$ and to counteract the high overshoot by increasing our damping to $\zeta=0.75$, making our desired poles ot become:
+\begin{equation}
+	S_{1,2}=-3+2.6458j
+	\label{eq:32}
+\end{equation}
+The previous design steps for $Lead_1$ are repeated , but for the desired poles in Equation(\ref{eq:32}), our open loop pole is obtained at s=-6.104. Our gain and closed loop poles are obtained to be:
+\begin{equation}
+	\begin{cases}
+		K=1534.7 \\
+		S_{1,2}=-3 \pm 2.6458j\\
+		S_3=-159.91\\
+		S_4=-2.69
+	\end{cases}
+\end{equation}
+So, the transfer function for this Lead compensator is:
+\begin{equation}
+	Lead_2(s)=\frac{1534.7(2.6927+s)}{6.104+s}
+	\label{eq:Lead2}
+\end{equation}
+and our performance is:
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Closedloop_Lead2}
+	\caption{Step Response for Closed loop Position Lead2 Compensation}
+\end{figure}
+\begin{equation}
+	\begin{cases}
+		t_r=0.919 s \\
+		t_s=1.4415 s\\
+		PO=2.8071\%\\
+		error_{ss}=0\%
+	\end{cases}
+\label{eq:38i}
+\end{equation}
+It can be observed that this compensator achieves all our performance specifications, making it a good candidate to consider.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Lead2_Ramp}
+	\caption{Ramp Response for Closed loop Position Lead2 Controller}
+	\label{fig:Lead2ramp}
+\end{figure}
+
+The system was simulated for a unity ramp input and the steady state error is obtained to be $38.24\%$ as shown in Figure(\ref{fig:Lead2ramp}).
+for $R(s)=\frac{1}{s^2}$:
+
+\begin{flalign*}
+	\label{eq:Lead2ramp}
+	e_{ss} &	= \lim_{s \to 0}  \frac{sR(s)}{1+Lead_2(s)* G(s)}\\
+	&	=\lim_{s \to 0} \frac{1}{s+sLead_2(s)* G(s)}\\
+	&	=\frac{5.265}{13.77}\\
+	&	=0.3824
+\end{flalign*}
+As seen above, the analytical calculation of the error matches with our simulation findings of a steady state error of 30.25\%
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{BodeMargin_Lead2}
+	\caption{Phase and Gain Margins using Bode Plot For Lead2 controller}
+	\label{fig:MarginLead2}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Nyquist_Lead2}
+	\caption{Nyquist Plot For Lead2 controller}
+	\label{fig:Nyquist_Lead2}
+\end{figure}
+
+It can be observed in Figure(\ref{fig:MarginLead2}) that our Gain margin $G_m= 35.9 dB$ at $w=31.2 rad/s$ and our Phase margin $P_m=67.4^\circ$ at $w=2.43 rad/s$. The cutoff frequency is found to be at $w_b=3.26 rad/s$
+\subsection{Lead Frequency Domain Design}
+The frequency specification are picked to be the characteristics of the $Lead_2$ compensator, since it gives desired time specifications.
+\\
+The velocity static error is known to be equal to the gain crossover frequency $K_v=2.43 rad/s$. The gain and phase margins are known to be $G_m= 35.9 dB$ and $P_m=67.4^\circ$ respectively.
+\begin{flalign*}
+	K_v &	= \lim_{s \to 0}  sKG(s)\\
+	&	=\lim_{s \to 0}\frac{0.003333K}{0.002004s^2+0.3257s+0.8625}\\
+	&	=0.0039K\\
+	&	=2.43
+\end{flalign*}
+So, $K=628.8254$
+$G_1(s)=KG(s)$ is defined, and its bode plot is shown in Figure(\ref{fig:MarginLead3a}). It can be observed that the gain margin and phase margin are 36.5 and $53.2^\circ$ respectively.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{BodeMargin_Lead3a}
+	\caption{Phase and Gain Margins using Bode Plot For $G_1(s)$}
+	\label{fig:MarginLead3a}
+\end{figure}
+\\
+The phase-lead angle is calculated to be $\phi_m=14.2^\circ$ and an additional $8^\circ$ is added to reach $\phi_m=22.2^\circ$, since the lead compensator shifts the gain cross-over frequency to the right and decreases phase margin.
+\\
+\begin{equation}
+	\label{eq:38}
+	sin(\phi_m)=\frac{1-\alpha}{1+\alpha}
+\end{equation}
+Next $\alpha=0.4515$ is obtained from the relationship in Equation(\ref{eq:38})
+\\
+The new gain cross over frequency is found by locating the frequency at which:
+\begin{equation}
+	|G_1(s)|=-20log(\frac{1}{\sqrt{\alpha}})=-3.453
+\end{equation}
+$W_m=2.6 rad/s$ is obtained from the Bode Plot in Figure(\ref{fig:MarginLead3a})
+\\
+\begin{equation}
+	\label{eq:40}
+	w_m=\frac{1}{\sqrt{\alpha}T}
+\end{equation}
+T is found from the relationship in Equation(\ref{eq:40}) to be $T=0.57239$.
+The Lead Compensator's pole, zero and gain is found to be:
+\begin{equation}
+	\begin{cases}
+		K_c=\frac{K}{\alpha}=1392.7472\\
+		zero=-\frac{1}{T}= -1.747 \\
+		pole=-\frac{1}{\alpha T}=-3.869458
+	\end{cases}
+\end{equation}
+So, the $Lead_3$ compensator's transfer function is:
+\begin{equation}
+	Lead_3=\frac{1392.7472(s+1.747)}{s+3.869458}
+	\label{eq:43}
+\end{equation}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Closedloop_Lead3}
+	\caption{Step Response for Closed loop Position Lead3 Compensation}
+\end{figure}
+The following time domain characteristics are obtained:
+\begin{equation}
+	\begin{cases}
+		t_r=0.894 s \\
+		t_s=1.9962 s\\
+		PO=1.5048\%\\
+		error_{ss}=0.29\%
+	\end{cases}
+\end{equation}
+All the time domain characteristics are satisfactory, which makes this lead compensator a viable candidate to be used.
+
+\begin{figure}[h]
+	
+	\centering
+	\includegraphics[width=0.4\textwidth]{BodeMargin_Lead3b}
+	\caption{Phase and Gain Margins using Bode Plot For Lead3 Compensator}
+	\label{fig:MarginLead3b}
+\end{figure}
+For the frequency domain characteristics, the phase margin is satisfactory, but the gain margin isn't. Repeating the design is needed until satisfactory characteristics are obtained.
+
+\subsection{Lag Compensators}
+It is known that lag compensators are used to improve our steady state response, when the transient response is satisfactory. Since this is not the case for this system, lag compensators will not be even considered to control our system.
+\subsection{Lead-Lag Compensators}
+An acceptable steady state error for our system was already obtained by using the lead compensator in Equation(\ref{eq:Lead2}), so a lag compensator does not need to be added to it. If a lag-lead compensator is used, it will only slow down our system and decrease the relative stability of our system by adding a not fully negated pole near the imaginary axis. It will decrease the steady state error for a ramp input, but that is not of value to us according to the requirements.
+\\
+\\
+Using Nyquist Plots it can be deduced that for the original open loop,  $PD_1$, $PD_2$, $Lead_1$, $Lead_2$, $Lead_3$ and $PID$: there are 3 open loop poles, but none of them are in the right hand side of the s-plane then $P=0$(where P is the number of open loop poles in the right had side). From the Nyquist plot it can be seen that the Nyquist curve does not encircle the point $s=-1$, then $N=0$, where N is the number of clockwise encirclements of the point $s=-1+0j$. Then, $Z=N-P=0-0=0$ (where Z is the number of open loop zeros in the right had side). This indicates that the system is stable for all values of K.
+\\
+\\
+It can also be inferred from the Bode Plots of the system with every controller that they all act as low pass filters. This causes any noise that passes through them to be negated. The range of signals that pass have a frequency between $0 \leq w \leq w_b$ for each controller.
+\section{Final Design}
+Besides the PI controller, all of the designs resulted in stable output for a step input, but only the PD2 controller as well as the Lead2 and $Lead_3$ compensators met our performance requirements. From Equations (\ref{eq:28}), (\ref{eq:38i}) and (\ref{eq:43}), we observe that the steady state error for all three is practically negligible, and that the rise time is roughly similar across the designs. $Lead_3$ provides the lowest overshoot, but the settling time is almost at 2 seconds, which is not desirable from a robustness perspective, as any change in the conditions might slow down the system beyond the lowest desired speed. Therefore, we settle for $Lead_2$ as it results in the lowest settling time without sacrificing much on overshoot. Stability, performance and robustness are now all met. 
+\subsection{Rejecting Disturbances}\label{AA}
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.23\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Disturbance_PD2_Without}
+		\caption{Without Saturation}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.245\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Disturbance_PD2_With}
+		\caption{With Saturation}
+	\end{subfigure}
+	\caption{Closed Loop Unit Step response for Unit step Disturbance on Motor \& $PD_2$ Controller}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Disturbance_PID_Without}
+		\caption{Without Saturation}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Disturbance_PID_With}
+		\caption{With Saturation}
+	\end{subfigure}
+	\caption{Closed Loop Unit Step response for Unit step Disturbance on Motor \& $PID$ Controller}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Disturbance_Lead2_Without}
+		\caption{Without Saturation}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Disturbance_Lead2_With}
+		\caption{With Saturation}
+	\end{subfigure}
+	\caption{Closed Loop Unit Step response for Unit step Disturbance on Motor \& $Lead_2$ Controller}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.23\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Disturbance_Lead3_Without}
+		\caption{Without Saturation}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.245\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Disturbance_Lead3_With}
+		\caption{With Saturation}
+	\end{subfigure}
+	\caption{Closed Loop Unit Step response for Unit step Disturbance on Motor \& $Lead_3$ Controller}
+
+\end{figure}
+Upon adding a unit disturbance torque to the motor shaft, it is shown that the response of the system with different controllers without adding a saturation limit to the voltage can counteract this torque disturbance without affecting the response curve, where the maximum value of the response to a unit disturbance is 1 rad/s since the input is a step of 1 rad/s. However, when a saturation limit of 10-25V is added to the voltage, the response of the system completely changes. This is due to the fact that saturation slows down the system’s response where the voltage induced torque takes a longer time to counteract the disturbance. So, the from the system’s response it would not be able to reject the disturbance induced.
+\\
+\\
+In the Simulink model without saturation, the voltage is observed to suddenly peak to 18000 V at the start and slowly decrease. This high voltage is needed to reach the desired performance specification. If saturation according to the description motor between 10-25 V DC  is added, it is not possible to reach these specifications. This shows that the motor used does not provide enough power to obtain the required performance. Therefore, another motor that is capable of providing this power is needed which will increase the cost.
+
+\section{Physical Model}
+To validate $Lead_1$ compensator, creating a physical controller and system was attempted, but the gearing and the load were not taken into account, and it was assumed that the characteristics of the used physical motor were the same as that of the one in the system. 
+\\
+Our transfer function was reevaluated based on these changes and assumptions, resulting in the following open loop transfer function:
+
+\begin{equation}
+	G(s)=\frac{0.003333}{0.002s^3+0.325s^2+0.8625s}
+\end{equation}
+For the same specifications as $Lead_1$,the same desired poles in Equation(\ref{eq:des}) were obtained.
+\\
+\\
+The Lead compensator obtained is:
+\begin{equation}
+	Lead_{1mod}(s)=\frac{729.8322(s+2.6987)}{s+4.0501}
+\end{equation}
+
+For the physical model, a myDAQ, breadboard, 5V DC motor is used to replicate our open-loop system. An optical encoder is used to measure the position, after designing a cardboard shape to check for the change of position $\theta$ with a resolution of $10^\circ$ as shown in Figure(\ref{fig:OpticalDesign}).
+\\
+The video of the running open-loop system can be accessed through this \href{https://drive.google.com/file/d/1W9mNAWkKYDeJSYNYfqdmgUC3PMgXVcT1/view?usp=sharing}{link}.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Design_Optical_Encoder}
+	\caption{Designing Cardboard Piece for using Optical Encoder}
+	\label{fig:OpticalDesign}
+\end{figure}
+
+The resistors and capacitors needed are found using the following equations:
+
+\begin{equation}
+	\begin{cases}
+		742=\frac{R_4C_1}{R_3C_2} \\
+	2.699=\frac{1}{R_1C_1}\\
+	4.0501=\frac{1}{R_2C_2}	\\
+	\end{cases}
+\end{equation}
+Assuming $R_1=R_2=R_3=10k\Omega$:
+\begin{equation}
+	\begin{cases}
+		C_1=37\mu F\\
+		C_2=24.7\mu F\\
+		R_4=4.9 M\Omega	\\
+	\end{cases}
+\end{equation}
+ Due to the limitations of the resistors and capacitors available, the used resistances and capacitors are as shown in Figure(\ref{fig:OpenloopLead})
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[width=0.5\textwidth]{Openloop with Lead}
+ 	\caption{Openloop System with Lead Compensator}
+ 	\label{fig:OpenloopLead}
+ \end{figure}
+Unfortunetly, after assembling the entire circuits. The motor did not spin; however, the voltage given to the motor was controlled to the MyDAQ's voltage capacity. Initially, this could be due to the low impedance of the motor compared to the rest of our circuit, so a buffer was added, but it did not improve it. This is due to the fact that the MyDAQ does not offer enough voltage to control the motor and a motor driver is needed.
+\\
+\\
+The video of the final measurements of the voltage between the motor terminals using a multimeter can be accessed through this \href{https://drive.google.com/file/d/1aL9mfFcjekG42DmmEwllUpRefdO4Hipb/view?usp=sharing}{link}.
+\\
+\\
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{Hardware1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{Hardware2}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{Hardware3}
+		
+		
+	\end{subfigure}
+	\caption{Modified Physical Model of the system}
+	\label{fig:FinalHard}
+\end{figure}
+Finally, the final circuit and system can be seen in Figure(\ref{fig:FinalHard}).
+
+
+%\section{Appendix}
+
+\section{Acknowledgment}
+
+We would like  to thank Dr. Naseem Daher for his help and guidance throughout this project.
+\bibliographystyle{ieeetr}
+\bibliography{citation.bib}
+
+
+\end{document}

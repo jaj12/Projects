@@ -1,0 +1,1 @@
+This project/case study compares two electricity proposals using multiple economic analysis methods, concluding with the best option.

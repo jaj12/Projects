@@ -1,0 +1,1143 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.19)  25 OCT 2022 11:58
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./Control_Project.tex
+(Control_Project.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-04-10>
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen138
+\@IEEEtrantmpdimenB=\dimen139
+\@IEEEtrantmpdimenC=\dimen140
+\@IEEEtrantmpcountA=\count185
+\@IEEEtrantmpcountB=\count186
+\@IEEEtrantmpcountC=\count187
+\@IEEEtrantmptoksA=\toks16
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen141
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen142
+\CLASSINFOnormalsizeunitybaselineskip=\dimen143
+\IEEEnormaljot=\dimen144
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen145
+\IEEEquantizedlengthdiff=\dimen146
+\IEEEquantizedtextheightdiff=\dimen147
+\IEEEilabelindentA=\dimen148
+\IEEEilabelindentB=\dimen149
+\IEEEilabelindent=\dimen150
+\IEEEelabelindent=\dimen151
+\IEEEdlabelindent=\dimen152
+\IEEElabelindent=\dimen153
+\IEEEiednormlabelsep=\dimen154
+\IEEEiedmathlabelsep=\dimen155
+\IEEEiedtopsep=\skip47
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@IEEEsubequation=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count193
+\c@table=\count194
+\@IEEEeqnnumcols=\count195
+\@IEEEeqncolcnt=\count196
+\@IEEEsubeqnnumrollback=\count197
+\@IEEEquantizeheightA=\dimen156
+\@IEEEquantizeheightB=\dimen157
+\@IEEEquantizeheightC=\dimen158
+\@IEEEquantizeprevdepth=\dimen159
+\@IEEEquantizemultiple=\count198
+\@IEEEquantizeboxA=\box50
+\@IEEEtmpitemindent=\dimen160
+\IEEEPARstartletwidth=\dimen161
+\c@IEEEbiography=\count199
+\@IEEEtranrubishbin=\box51
+)
+** ATTENTION: Overriding command lockouts (line 2).
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen162
+))
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen163
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count266
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count267
+\leftroot@=\count268
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count269
+\DOTSCASE@=\count270
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen164
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count271
+\c@MaxMatrixCols=\count272
+\dotsspace@=\muskip16
+\c@parentequation=\count273
+\dspbrk@lvl=\count274
+\tag@help=\toks18
+\row@=\count275
+\column@=\count276
+\maxfields@=\count277
+\andhelp@=\toks19
+\eqnshift@=\dimen165
+\alignsep@=\dimen166
+\tagshift@=\dimen167
+\tagwidth@=\dimen168
+\totwidth@=\dimen169
+\lineht@=\dimen170
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithmic.
+sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+ (C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+\c@ALC@unique=\count278
+\c@ALC@line=\count279
+\c@ALC@rem=\count280
+\c@ALC@depth=\count281
+\ALC@tlm=\skip53
+\algorithmicindent=\skip54
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
+) (C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen173
+\Hy@linkcounter=\count282
+\Hy@pagecounter=\count283
+ (C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count284
+ (C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count285
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen174
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count286
+\Field@Width=\dimen175
+\Fld@charsize=\dimen176
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count287
+\c@Item=\count288
+\c@Hfootnote=\count289
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count290
+\c@bookmark@seq@number=\count291
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip55
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen177
+\captionmargin=\dimen178
+\caption@leftmargin=\dimen179
+\caption@rightmargin=\dimen180
+\caption@width=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1176.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count292
+\c@continuedfloat=\count293
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count294
+\c@subtable=\count295
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count296
+\l__pdf_internal_box=\box54
+) (Control_Project.aux
+
+LaTeX Warning: Label `AA' multiply defined.
+
+
+LaTeX Warning: Label `AA' multiply defined.
+
+
+LaTeX Warning: Label `AA' multiply defined.
+
+
+LaTeX Warning: Label `fig:PDstep' multiply defined.
+
+
+LaTeX Warning: Label `AA' multiply defined.
+
+)
+\openout1 = `Control_Project.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+
+-- Lines per column: 56 (exact).
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count297
+\scratchdimen=\dimen185
+\scratchbox=\box55
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen186
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks24
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package hyperref Info: Link coloring OFF on input line 16.
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count303
+)
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
+ (Control_Project.out) (Control_Project.out)
+\@outlinefile=\write3
+\openout3 = `Control_Project.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+Underfull \hbox (badness 2088) in paragraph at lines 52--77
+[]\OT1/ptm/m/n/10 The DC mo-tor has been one of most widely used
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 52--77
+\OT1/ptm/m/n/10 mo-tors due to its speed con-trol qual-i-ties, even though
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--77
+
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 52--77
+\OT1/ptm/m/n/10 ef-fi-cient op-ti-miza-tion tech-nique used to solve prob-lems.
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--77
+
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 52--77
+\OT1/ptm/m/n/10 After per-form-ing sim-u-la-tions, they con-cluded that FLC
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 52--77
+\OT1/ptm/m/n/10 con-troller is the high over-shoot. FLC elim-i-nated these
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 52--77
+\OT1/ptm/m/n/10 un-de-sired os-cil-la-tions and pro-vided a smooth tran-sient
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--77
+
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 52--77
+\OT1/ptm/m/n/10 Zhang et al. de-signed ac-tive and en-ergy re-gen-er-a-tive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--77
+
+ []
+
+[1{C:/Users/Jihad/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+
+]
+Underfull \hbox (badness 1728) in paragraph at lines 78--85
+[]\OT1/ptm/m/n/10 Previous work has been done on con-trol-ling a one-
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 78--85
+\OT1/ptm/m/n/10 an-gu-lar po-si-tion and volt-age was de-rived. A sim-ple
+ []
+
+
+Underfull \hbox (badness 5022) in paragraph at lines 78--85
+\OT1/ptm/m/n/10 pro-por-tional con-troller was able to meet the de-sired
+ []
+
+
+Underfull \hbox (badness 2717) in paragraph at lines 78--85
+\OT1/ptm/m/n/10 re-quire-ments [[]7[]], but it is wor-thy to note that these
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--85
+
+ []
+
+
+Underfull \hbox (badness 6236) in paragraph at lines 78--85
+\OT1/ptm/m/n/10 Chowdhury et al. adopted four con-trollers, in-clud-ing
+ []
+
+<./images//FBD.png, id=113, 330.48468pt x 144.54pt>
+File: ./images//FBD.png Graphic file (type png)
+<use ./images//FBD.png>
+Package pdftex.def Info: ./images//FBD.png  used on input line 88.
+(pdftex.def)             Requested size: 206.39685pt x 90.2733pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
+
+
+(C:\Users\Jihad\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \vbox (badness 2035) has occurred while \output is active []
+
+<./images//Blockdiagram.png, id=122, 628.3475pt x 313.17pt>
+File: ./images//Blockdiagram.png Graphic file (type png)
+<use ./images//Blockdiagram.png>
+Package pdftex.def Info: ./images//Blockdiagram.png  used on input line 214.
+(pdftex.def)             Requested size: 258.0pt x 128.58688pt.
+<./images//BlockdiagramSimplified.png, id=123, 608.2725pt x 222.8325pt>
+File: ./images//BlockdiagramSimplified.png Graphic file (type png)
+<use ./images//BlockdiagramSimplified.png>
+Package pdftex.def Info: ./images//BlockdiagramSimplified.png  used on input li
+ne 219.
+(pdftex.def)             Requested size: 258.0pt x 94.51724pt.
+<./images//BlockdiagramGeneral.png, id=124, 610.78188pt x 257.96375pt>
+File: ./images//BlockdiagramGeneral.png Graphic file (type png)
+<use ./images//BlockdiagramGeneral.png>
+Package pdftex.def Info: ./images//BlockdiagramGeneral.png  used on input line 
+223.
+(pdftex.def)             Requested size: 258.0pt x 108.96988pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 212--225
+ [][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 212--225
+ [] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 212--225
+ [] 
+ []
+
+[2 <./images//FBD.png>]
+<./images//Openloop_Position.png, id=152, 741.52031pt x 593.96906pt>
+File: ./images//Openloop_Position.png Graphic file (type png)
+<use ./images//Openloop_Position.png>
+Package pdftex.def Info: ./images//Openloop_Position.png  used on input line 25
+7.
+(pdftex.def)             Requested size: 232.19843pt x 185.98647pt.
+<./images//Openloop_Velocity.png, id=154, 572.89032pt x 510.40688pt>
+File: ./images//Openloop_Velocity.png Graphic file (type png)
+<use ./images//Openloop_Velocity.png>
+Package pdftex.def Info: ./images//Openloop_Velocity.png  used on input line 26
+7.
+(pdftex.def)             Requested size: 206.39685pt x 183.88652pt.
+ [3 <./images//Blockdiagram.png> <./images//BlockdiagramSimplified.png> <./imag
+es//BlockdiagramGeneral.png> <./images//Openloop_Position.png>]
+<./images//BodeMargin_Openloop.png, id=179, 632.3625pt x 474.27188pt>
+File: ./images//BodeMargin_Openloop.png Graphic file (type png)
+<use ./images//BodeMargin_Openloop.png>
+Package pdftex.def Info: ./images//BodeMargin_Openloop.png  used on input line 
+274.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+<./images//Nyquist_Openloop.png, id=180, 632.3625pt x 474.27188pt>
+File: ./images//Nyquist_Openloop.png Graphic file (type png)
+<use ./images//Nyquist_Openloop.png>
+Package pdftex.def Info: ./images//Nyquist_Openloop.png  used on input line 280
+.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images//Rootlocus_Openloop.png, id=181, 420.06938pt x 370.38374pt>
+File: ./images//Rootlocus_Openloop.png Graphic file (type png)
+<use ./images//Rootlocus_Openloop.png>
+Package pdftex.def Info: ./images//Rootlocus_Openloop.png  used on input line 3
+33.
+(pdftex.def)             Requested size: 118.6778pt x 104.63925pt.
+<./images//Rootlocus_OpenloopZ.png, id=182, 449.42906pt x 390.70969pt>
+File: ./images//Rootlocus_OpenloopZ.png Graphic file (type png)
+<use ./images//Rootlocus_OpenloopZ.png>
+Package pdftex.def Info: ./images//Rootlocus_OpenloopZ.png  used on input line 
+338.
+(pdftex.def)             Requested size: 129.0pt x 112.14632pt.
+[4 <./images//Openloop_Velocity.png> <./images//BodeMargin_Openloop.png (PNG co
+py)> <./images//Nyquist_Openloop.png (PNG copy)> <./images//Rootlocus_Openloop.
+png> <./images//Rootlocus_OpenloopZ.png>]
+<./images//Closedloop_Pcontrol.png, id=202, 429.10312pt x 363.60844pt>
+File: ./images//Closedloop_Pcontrol.png Graphic file (type png)
+<use ./images//Closedloop_Pcontrol.png>
+Package pdftex.def Info: ./images//Closedloop_Pcontrol.png  used on input line 
+356.
+(pdftex.def)             Requested size: 206.39685pt x 174.89624pt.
+<./images//BodeMargin_P.png, id=203, 632.3625pt x 474.27188pt>
+File: ./images//BodeMargin_P.png Graphic file (type png)
+<use ./images//BodeMargin_P.png>
+Package pdftex.def Info: ./images//BodeMargin_P.png  used on input line 376.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images//Nyquist_P.png, id=204, 632.3625pt x 474.27188pt>
+File: ./images//Nyquist_P.png Graphic file (type png)
+<use ./images//Nyquist_P.png>
+Package pdftex.def Info: ./images//Nyquist_P.png  used on input line 382.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images//Rootlocus_PD1.png, id=206, 417.81094pt x 358.33875pt>
+File: ./images//Rootlocus_PD1.png Graphic file (type png)
+<use ./images//Rootlocus_PD1.png>
+Package pdftex.def Info: ./images//Rootlocus_PD1.png  used on input line 401.
+(pdftex.def)             Requested size: 118.6778pt x 101.78313pt.
+<./images//Rootlocus_PD1z.png, id=207, 421.575pt x 356.83313pt>
+File: ./images//Rootlocus_PD1z.png Graphic file (type png)
+<use ./images//Rootlocus_PD1z.png>
+Package pdftex.def Info: ./images//Rootlocus_PD1z.png  used on input line 406.
+(pdftex.def)             Requested size: 129.0pt x 109.19057pt.
+[5 <./images//Closedloop_Pcontrol.png> <./images//BodeMargin_P.png (PNG copy)> 
+<./images//Nyquist_P.png (PNG copy)> <./images//Rootlocus_PD1.png> <./images//R
+ootlocus_PD1z.png>]
+<./images//Closedloop_PD1control.png, id=222, 413.29407pt x 363.60844pt>
+File: ./images//Closedloop_PD1control.png Graphic file (type png)
+<use ./images//Closedloop_PD1control.png>
+Package pdftex.def Info: ./images//Closedloop_PD1control.png  used on input lin
+e 428.
+(pdftex.def)             Requested size: 206.39685pt x 181.58739pt.
+<./images//Closedloop_PD2control.png, id=224, 269.50688pt x 242.9075pt>
+File: ./images//Closedloop_PD2control.png Graphic file (type png)
+<use ./images//Closedloop_PD2control.png>
+Package pdftex.def Info: ./images//Closedloop_PD2control.png  used on input lin
+e 464.
+(pdftex.def)             Requested size: 206.39685pt x 186.02747pt.
+<./images//PD2_Ramp.png, id=225, 412.54124pt x 363.60844pt>
+File: ./images//PD2_Ramp.png Graphic file (type png)
+<use ./images//PD2_Ramp.png>
+Package pdftex.def Info: ./images//PD2_Ramp.png  used on input line 482.
+(pdftex.def)             Requested size: 206.39685pt x 181.91473pt.
+
+Overfull \hbox (14.33759pt too wide) detected at line 497
+[]
+ []
+
+[6 <./images//Closedloop_PD1control.png> <./images//Closedloop_PD2control.png> 
+<./images//PD2_Ramp.png>]
+<./images//BodeMargin_PD.png, id=245, 632.3625pt x 474.27188pt>
+File: ./images//BodeMargin_PD.png Graphic file (type png)
+<use ./images//BodeMargin_PD.png>
+Package pdftex.def Info: ./images//BodeMargin_PD.png  used on input line 502.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+<./images//Nyquist_PD2.png, id=246, 632.3625pt x 474.27188pt>
+File: ./images//Nyquist_PD2.png Graphic file (type png)
+<use ./images//Nyquist_PD2.png>
+Package pdftex.def Info: ./images//Nyquist_PD2.png  used on input line 508.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+<./images//Rootlocus_PID.png, id=248, 418.56375pt x 356.0803pt>
+File: ./images//Rootlocus_PID.png Graphic file (type png)
+<use ./images//Rootlocus_PID.png>
+Package pdftex.def Info: ./images//Rootlocus_PID.png  used on input line 521.
+(pdftex.def)             Requested size: 118.6778pt x 100.95691pt.
+<./images//Rootlocus_PIDz.png, id=249, 414.04688pt x 358.33875pt>
+File: ./images//Rootlocus_PIDz.png Graphic file (type png)
+<use ./images//Rootlocus_PIDz.png>
+Package pdftex.def Info: ./images//Rootlocus_PIDz.png  used on input line 526.
+(pdftex.def)             Requested size: 129.0pt x 111.64705pt.
+<./images//Closedloop_PIDcontrol.png, id=251, 412.54124pt x 362.85562pt>
+File: ./images//Closedloop_PIDcontrol.png Graphic file (type png)
+<use ./images//Closedloop_PIDcontrol.png>
+Package pdftex.def Info: ./images//Closedloop_PIDcontrol.png  used on input lin
+e 550.
+(pdftex.def)             Requested size: 206.39685pt x 181.5381pt.
+ [7 <./images//BodeMargin_PD.png (PNG copy)> <./images//Nyquist_PD2.png (PNG co
+py)> <./images//Rootlocus_PID.png> <./images//Rootlocus_PIDz.png> <./images//Cl
+osedloop_PIDcontrol.png>]
+<./images//PID_Ramp.png, id=268, 380.42125pt x 343.2825pt>
+File: ./images//PID_Ramp.png Graphic file (type png)
+<use ./images//PID_Ramp.png>
+Package pdftex.def Info: ./images//PID_Ramp.png  used on input line 572.
+(pdftex.def)             Requested size: 206.39685pt x 186.24977pt.
+<./images//PID_Parabola.png, id=270, 421.575pt x 316.18124pt>
+File: ./images//PID_Parabola.png Graphic file (type png)
+<use ./images//PID_Parabola.png>
+Package pdftex.def Info: ./images//PID_Parabola.png  used on input line 580.
+(pdftex.def)             Requested size: 206.39685pt x 154.7999pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--588
+
+ []
+
+<./images//BodeMargin_PID.png, id=272, 632.3625pt x 474.27188pt>
+File: ./images//BodeMargin_PID.png Graphic file (type png)
+<use ./images//BodeMargin_PID.png>
+Package pdftex.def Info: ./images//BodeMargin_PID.png  used on input line 600.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+<./images//Nyquist_PID.png, id=273, 632.3625pt x 474.27188pt>
+File: ./images//Nyquist_PID.png Graphic file (type png)
+<use ./images//Nyquist_PID.png>
+Package pdftex.def Info: ./images//Nyquist_PID.png  used on input line 606.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--615
+
+ []
+
+<./images//Rootlocus_Lead1.png, id=275, 327.72438pt x 282.55562pt>
+File: ./images//Rootlocus_Lead1.png Graphic file (type png)
+<use ./images//Rootlocus_Lead1.png>
+Package pdftex.def Info: ./images//Rootlocus_Lead1.png  used on input line 625.
+
+(pdftex.def)             Requested size: 123.84283pt x 106.77295pt.
+<./images//Rootlocus_Lead1z.png, id=276, 326.21875pt x 284.06125pt>
+File: ./images//Rootlocus_Lead1z.png Graphic file (type png)
+<use ./images//Rootlocus_Lead1z.png>
+Package pdftex.def Info: ./images//Rootlocus_Lead1z.png  used on input line 630
+.
+(pdftex.def)             Requested size: 123.84283pt x 107.84036pt.
+[8 <./images//PID_Ramp.png> <./images//PID_Parabola.png (PNG copy)> <./images//
+BodeMargin_PID.png (PNG copy)> <./images//Nyquist_PID.png (PNG copy)>]
+<./images//Closedloop_Lead1.png, id=287, 377.91188pt x 338.76563pt>
+File: ./images//Closedloop_Lead1.png Graphic file (type png)
+<use ./images//Closedloop_Lead1.png>
+Package pdftex.def Info: ./images//Closedloop_Lead1.png  used on input line 650
+.
+(pdftex.def)             Requested size: 206.39685pt x 185.01903pt.
+<./images//Closedloop_Lead2.png, id=289, 411.03563pt x 359.84438pt>
+File: ./images//Closedloop_Lead2.png Graphic file (type png)
+<use ./images//Closedloop_Lead2.png>
+Package pdftex.def Info: ./images//Closedloop_Lead2.png  used on input line 683
+.
+(pdftex.def)             Requested size: 206.39685pt x 180.69044pt.
+<./images//Lead2_Ramp.png, id=290, 367.3725pt x 335.00156pt>
+File: ./images//Lead2_Ramp.png Graphic file (type png)
+<use ./images//Lead2_Ramp.png>
+Package pdftex.def Info: ./images//Lead2_Ramp.png  used on input line 699.
+(pdftex.def)             Requested size: 206.39685pt x 188.21298pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./images//Rootlocus_Lead1.png> <./images//Rootlocus_Lead1z.png> <./images//
+Closedloop_Lead1.png> <./images//Closedloop_Lead2.png>]
+<./images//BodeMargin_Lead2.png, id=310, 632.3625pt x 474.27188pt>
+File: ./images//BodeMargin_Lead2.png Graphic file (type png)
+<use ./images//BodeMargin_Lead2.png>
+Package pdftex.def Info: ./images//BodeMargin_Lead2.png  used on input line 719
+.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+<./images//Nyquist_Lead2.png, id=311, 632.3625pt x 474.27188pt>
+File: ./images//Nyquist_Lead2.png Graphic file (type png)
+<use ./images//Nyquist_Lead2.png>
+Package pdftex.def Info: ./images//Nyquist_Lead2.png  used on input line 725.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images//BodeMargin_Lead3a.png, id=314, 632.3625pt x 474.27188pt>
+File: ./images//BodeMargin_Lead3a.png Graphic file (type png)
+<use ./images//BodeMargin_Lead3a.png>
+Package pdftex.def Info: ./images//BodeMargin_Lead3a.png  used on input line 74
+5.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--752
+
+ []
+
+[10 <./images//Lead2_Ramp.png> <./images//BodeMargin_Lead2.png (PNG copy)> <./i
+mages//Nyquist_Lead2.png (PNG copy)> <./images//BodeMargin_Lead3a.png (PNG copy
+)>]
+Underfull \hbox (badness 10000) in paragraph at lines 761--764
+
+ []
+
+<./images//Closedloop_Lead3.png, id=327, 368.87813pt x 331.2375pt>
+File: ./images//Closedloop_Lead3.png Graphic file (type png)
+<use ./images//Closedloop_Lead3.png>
+Package pdftex.def Info: ./images//Closedloop_Lead3.png  used on input line 785
+.
+(pdftex.def)             Requested size: 206.39685pt x 185.33504pt.
+<./images//BodeMargin_Lead3b.png, id=328, 632.3625pt x 474.27188pt>
+File: ./images//BodeMargin_Lead3b.png Graphic file (type png)
+<use ./images//BodeMargin_Lead3b.png>
+Package pdftex.def Info: ./images//BodeMargin_Lead3b.png  used on input line 80
+2.
+(pdftex.def)             Requested size: 206.39685pt x 154.79507pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 811--818
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 811--818
+
+ []
+
+[11 <./images//Closedloop_Lead3.png> <./images//BodeMargin_Lead3b.png (PNG copy
+)>]
+<./images//Disturbance_PD2_Without.png, id=346, 627.09282pt x 464.4853pt>
+File: ./images//Disturbance_PD2_Without.png Graphic file (type png)
+<use ./images//Disturbance_PD2_Without.png>
+Package pdftex.def Info: ./images//Disturbance_PD2_Without.png  used on input l
+ine 825.
+(pdftex.def)             Requested size: 118.6778pt x 87.89874pt.
+<./images//Disturbance_PD2_With.png, id=347, 668.4975pt x 468.24937pt>
+File: ./images//Disturbance_PD2_With.png Graphic file (type png)
+<use ./images//Disturbance_PD2_With.png>
+Package pdftex.def Info: ./images//Disturbance_PD2_With.png  used on input line
+ 831.
+(pdftex.def)             Requested size: 126.41748pt x 88.54675pt.
+<./images//Disturbance_PID_Without.png, id=348, 442.65375pt x 329.73187pt>
+File: ./images//Disturbance_PID_Without.png Graphic file (type png)
+<use ./images//Disturbance_PID_Without.png>
+Package pdftex.def Info: ./images//Disturbance_PID_Without.png  used on input l
+ine 841.
+(pdftex.def)             Requested size: 123.84283pt x 92.24881pt.
+<./images//Disturbance_PID_With.png, id=349, 627.84563pt x 464.4853pt>
+File: ./images//Disturbance_PID_With.png Graphic file (type png)
+<use ./images//Disturbance_PID_With.png>
+Package pdftex.def Info: ./images//Disturbance_PID_With.png  used on input line
+ 847.
+(pdftex.def)             Requested size: 123.84283pt x 91.61966pt.
+<./images//Disturbance_Lead2_Without.png, id=350, 470.50781pt x 330.48468pt>
+File: ./images//Disturbance_Lead2_Without.png Graphic file (type png)
+<use ./images//Disturbance_Lead2_Without.png>
+Package pdftex.def Info: ./images//Disturbance_Lead2_Without.png  used on input
+ line 857.
+(pdftex.def)             Requested size: 123.84283pt x 86.988pt.
+<./images//Disturbance_Lead2_With.png, id=351, 476.53032pt x 341.02406pt>
+File: ./images//Disturbance_Lead2_With.png Graphic file (type png)
+<use ./images//Disturbance_Lead2_With.png>
+Package pdftex.def Info: ./images//Disturbance_Lead2_With.png  used on input li
+ne 863.
+(pdftex.def)             Requested size: 123.84283pt x 88.62773pt.
+<./images//Disturbance_Lead3_Without.png, id=352, 470.50781pt x 346.29375pt>
+File: ./images//Disturbance_Lead3_Without.png Graphic file (type png)
+<use ./images//Disturbance_Lead3_Without.png>
+Package pdftex.def Info: ./images//Disturbance_Lead3_Without.png  used on input
+ line 873.
+(pdftex.def)             Requested size: 118.6778pt x 87.34468pt.
+<./images//Disturbance_Lead3_With.png, id=353, 475.7775pt x 333.49594pt>
+File: ./images//Disturbance_Lead3_With.png Graphic file (type png)
+<use ./images//Disturbance_Lead3_With.png>
+Package pdftex.def Info: ./images//Disturbance_Lead3_With.png  used on input li
+ne 879.
+(pdftex.def)             Requested size: 126.41748pt x 88.61008pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 885--889
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 897--902
+
+ []
+
+[12 <./images//Disturbance_PD2_Without.png> <./images//Disturbance_PD2_With.png
+> <./images//Disturbance_PID_Without.png> <./images//Disturbance_PID_With.png> 
+<./images//Disturbance_Lead2_Without.png> <./images//Disturbance_Lead2_With.png
+> <./images//Disturbance_Lead3_Without.png> <./images//Disturbance_Lead3_With.p
+ng>]
+<./images//Design_Optical_Encoder.jpg, id=375, 335.75438pt x 394.47375pt>
+File: ./images//Design_Optical_Encoder.jpg Graphic file (type jpg)
+<use ./images//Design_Optical_Encoder.jpg>
+Package pdftex.def Info: ./images//Design_Optical_Encoder.jpg  used on input li
+ne 913.
+(pdftex.def)             Requested size: 206.39685pt x 242.49457pt.
+<./images//Openloop with Lead.png, id=377, 517.935pt x 247.92625pt>
+File: ./images//Openloop with Lead.png Graphic file (type png)
+<use ./images//Openloop with Lead.png>
+Package pdftex.def Info: ./images//Openloop with Lead.png  used on input line 9
+38.
+(pdftex.def)             Requested size: 258.0pt x 123.50507pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 938--939
+ [][] 
+ []
+
+<./images//Hardware1.jpeg, id=379, 1284.8pt x 961.5925pt>
+File: ./images//Hardware1.jpeg Graphic file (type jpg)
+<use ./images//Hardware1.jpeg>
+Package pdftex.def Info: ./images//Hardware1.jpeg  used on input line 952.
+(pdftex.def)             Requested size: 258.0pt x 193.09274pt.
+<./images//Hardware2.jpeg, id=380, 1284.8pt x 722.7pt>
+File: ./images//Hardware2.jpeg Graphic file (type jpg)
+<use ./images//Hardware2.jpeg>
+Package pdftex.def Info: ./images//Hardware2.jpeg  used on input line 957.
+(pdftex.def)             Requested size: 258.0pt x 145.12189pt.
+<./images//Hardware3.jpeg, id=381, 1284.8pt x 961.5925pt>
+File: ./images//Hardware3.jpeg Graphic file (type jpg)
+<use ./images//Hardware3.jpeg>
+Package pdftex.def Info: ./images//Hardware3.jpeg  used on input line 961.
+(pdftex.def)             Requested size: 258.0pt x 193.09274pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 950--965
+ [][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 950--965
+ [] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 950--965
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--969
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--969
+
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 934--969
+ \OT1/ptm/m/n/10 Fi-nally, the fi-nal cir-cuit and sys-tem can be seen in
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(Control_Project.bbl)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[13 <./images//Design_Optical_Encoder.jpg> <./images//Openloop with Lead.png>]
+[14
+
+ <./images//Hardware1.jpeg> <./images//Hardware2.jpeg> <./images//Hardware3.jpe
+g>] (Control_Project.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `Control_Project.out' has not changed.
+(rerunfilecheck)             Checksum: EC6B97A8E43799E0B0B8CE019EB395AA;2943.
+ ) 
+Here is how much of TeX's memory you used:
+ 13096 strings out of 478552
+ 221468 string characters out of 2841938
+ 513278 words of memory out of 3000000
+ 31018 multiletter control sequences out of 15000+600000
+ 509807 words of font info for 111 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 67i,15n,77p,1235b,484s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
+/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb><C:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cmextra/cmex9.pfb><C:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb><C:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Jihad/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Jihad/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Jihad/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Jihad/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/
+Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb><C:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr5.pfb><C:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><C:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb><C:/Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Jihad/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Jihad/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jihad/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Jihad/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Jih
+ad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/U
+sers/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/U
+sers/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/
+Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/
+Users/Jihad/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Control_Project.pdf (14 pages, 1942853 bytes).
+PDF statistics:
+ 522 PDF objects out of 1000 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
+ 419 words of extra memory for PDF output out of 10000 (max. 10000000)
+

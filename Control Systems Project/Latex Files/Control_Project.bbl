@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{Thomas09}
+N.~Thomas and D.~P. Poongodi, ``Position control of dc motor using genetic
+  algorithm based pid controller,'' in {\em Proceedings of the world congress
+  on engineering}, vol.~2, pp.~1--3, London, UK, 2009.
+
+\bibitem{Maung18}
+M.~M. Maung, M.~M. Latt, and C.~M. Nwe, ``Dc motor angular position control
+  using pid controller with friction compensation,'' {\em International journal
+  of scientific and research publications}, vol.~8, no.~11, p.~149, 2018.
+
+\bibitem{Paul16}
+H.~Paul and S.~Lasrado, ``Precise control of angular position of geared dc
+  motors for low cost applications,'' {\em International Journal of Innovative
+  Research in Science, Engineering and Technology}, vol.~5, no.~9,
+  pp.~574--578, 2016.
+
+\bibitem{Akbar14}
+M.~A. Akbar {\em et~al.}, ``Simulation of fuzzy logic control for dc servo
+  motor using arduino based on matlab/simulink,'' in {\em 2014 International
+  Conference on Intelligent Autonomous Agents, Networks and Systems},
+  pp.~42--46, IEEE, 2014.
+
+\bibitem{Zhang12}
+G.~Zhang, J.~Cao, and F.~Yu, ``Design of active and energy-regenerative
+  controllers for dc-motor-based suspension,'' {\em Mechatronics}, vol.~22,
+  no.~8, pp.~1124--1134, 2012.
+
+\bibitem{Namazov10}
+M.~Namazov and O.~Basturk, ``Dc motor position control using fuzzy
+  proportional-derivative controllers with different defuzzification methods,''
+  2010.
+
+\bibitem{Aung08}
+C.~H. Aung, K.~T. Lwin, and Y.~M. Myint, ``Modeling motion control system for
+  motorized robot arm using matlab,'' {\em World Academy of Science,
+  Engineering and Technology}, vol.~42, pp.~372--375, 2008.
+
+\bibitem{Ali16}
+M.~M. Ali and A.~Al-Khawaldeh, ``A simulation study of multi-disciplinary
+  position control methods of robot arm dc motor,'' in {\em 2016 13th
+  International Multi-Conference on Systems, Signals \& Devices (SSD)},
+  pp.~489--493, IEEE, 2016.
+
+\bibitem{Chowdhury19}
+D.~Chowdhury and M.~Sarkar, ``Digital controllers in discrete and continuous
+  time domains for a robot arm manipulator,'' {\em arXiv preprint
+  arXiv:1912.09020}, 2019.
+
+\end{thebibliography}

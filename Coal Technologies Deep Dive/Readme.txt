@@ -1,0 +1,1 @@
+This deep dive focussed on understanding and explaining the current Coal Technologies available and evaluating them based on economical and environmental factors.
