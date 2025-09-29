@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Minimal single‑file CV website for Jihad Jundi
+    Why this structure?
+      • Single HTML file → no build tools, portable, deploys anywhere (GitHub Pages/Netlify/Vercel)
+      • Accessible & responsive → semantic tags, high contrast, readable typography
+      • Printable → tuned @media print rules to export a tidy 1–2 page PDF
+      • SEO → Open Graph + JSON‑LD Person schema for rich snippets
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jihad Jundi – CV</title>
+  <meta name="description" content="CV of Jihad Jundi – Master’s student in Power Engineering at TUM with experience in fuel-cell CFD (OpenFOAM), data analytics (Power BI, Python, SQL), and energy systems." />
+
+  <!-- Social sharing (Open Graph + Twitter) -->
+  <meta property="og:title" content="Jihad Jundi – CV" />
+  <meta property="og:description" content="Master’s student in Power Engineering at TUM with experience in OpenFOAM CFD, Power BI, Python, and SQL." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com" /> <!-- TODO: replace with your domain -->
+  <meta property="og:image" content="https://your-domain.com/og-card.jpg" /> <!-- optional: social preview image -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    /* ---------- Base & Layout ---------- */
+    :root{
+      --bg: #0b0e13;         /* dark background */
+      --card: #11161f;       /* card background */
+      --muted: #a3b3c3;      /* muted text */
+      --txt: #e7edf3;        /* main text */
+      --acc: #61dafb;        /* accent */
+      --acc2: #a0eec0;       /* secondary accent */
+      --maxw: 1200px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root{ --bg:#f6f8fb; --card:#ffffff; --muted:#556070; --txt:#0c1116; --acc:#0ea5e9; --acc2:#22c55e; }
+    }
+    html,body{ height:100%; }
+    body{
+      margin:0; font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--txt); background: radial-gradient(1200px 600px at 20% -10%, #223 0%, transparent 60%), var(--bg);
+    }
+    .wrap{ max-width: var(--maxw); margin: 40px auto; padding: 0 20px 60px; }
+
+    /* ---------- Header ---------- */
+    header{ display:grid; grid-template-columns: 1fr auto; gap:18px; align-items:center; margin-bottom: 18px; }
+    .avatar{ width:200px; height:200px; border-radius: 14px; overflow:hidden; border:1px solid #2a3340; box-shadow: 0 4px 18px rgba(0,0,0,.25); }
+    .avatar img{ width:100%; height:100%; object-fit:cover; }
+    .title h1{ font-size: clamp(28px, 5vw, 40px); margin:0 0 6px; letter-spacing: .3px; }
+    .title p{ margin: 4px 0; color: var(--muted); }
+    .links{ display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+    .badge{ display:inline-flex; align-items:center; gap:8px; border:1px solid #2a3340; padding:8px 12px; border-radius: 12px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.06)); text-decoration:none; color:inherit; }
+    .badge:hover{ transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+
+    /* ---------- Grid sections ---------- */
+    .grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap: 20px; }
+    @media (max-width: 900px){ .grid{ grid-template-columns: 1fr; } }
+
+    section{ background: var(--card); border: 1px solid #2a3340; border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.16);
+      backdrop-filter: blur(6px);
+    }
+    section h2{ margin:0 0 12px; font-size: 18px; letter-spacing: .3px; text-transform: uppercase; color: var(--acc); }
+    section h3{ margin: 14px 0 6px; font-size: 16px; }
+    ul{ margin: 8px 0 0 18px; }
+
+    /* ---------- Chips & small UI ---------- */
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top: 8px; }
+    .chip{ padding:6px 10px; border-radius: 999px; border:1px solid #2a3340; background: rgba(255,255,255,.03); font-size: 13px; }
+
+    /* ---------- Footer ---------- */
+    footer{ text-align:center; color: var(--muted); margin-top: 22px; font-size: 14px; }
+
+    /* ---------- Print styles (A4‑friendly) ---------- */
+    @media print{
+      body{ background:#fff; color:#000; }
+      .wrap{ margin:0; padding:0; }
+      header{ grid-template-columns: auto 1fr; gap:16px; }
+      .badge{ border:none; padding:0; }
+      section{ border:none; box-shadow:none; padding:10px 0; }
+      .grid{ grid-template-columns: 1fr 1fr; gap: 16px; }
+      a::after{ content:" (" attr(href) ")"; font-size: 10px; color:#555; }
+      .no-print{ display:none !important; }
+    }
+
+    /* ---------- Small helpers ---------- */
+    .muted{ color: var(--muted); }
+    .row{ display:flex; justify-content:space-between; gap:10px; }
+  </style>
+
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Jihad Jundi</h1>
+        <p>Master’s student in Power Engineering @ TUM · Fuel‑cell CFD intern · Data analytics & Power BI in e‑mobility.</p>
+        <div class="links">
+          <a class="badge" href="mailto:jihad.3@hotmail.com">jihad.3@hotmail.com</a>
+          <a class="badge" href="https://www.linkedin.com/in/jihad-jundi/" target="_blank" rel="noopener">LinkedIn <!-- TODO: add your URL --></a>
+          <a class="badge" href="https://github.com/jaj12/Projects" target="_blank" rel="noopener">GitHub <!-- TODO: add your URL --></a>
+          <a class="badge" href="#" onclick="window.print()">Print to PDF</a>
+
+        </div>
+      </div>
+      <div class="avatar no-print">
+        <!-- Optional photo; square images work best -->
+        <img src="Jihad_Jundi_Foto.jpeg" alt="Portrait of Jihad Jundi" />
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- ===== Left column ===== -->
+      <section>
+        <h2>Experience</h2>
+        
+        <!-- BMW Working Student -->
+        <h3>BMW — Electromobility</h3>
+        <div class="row"><span class="muted">Working Student · Automation</span><span class="muted">Munich · 03/2025–Present</span></div>
+        <ul>
+          <li>Developed automation tools by using <strong>Python</strong> scripts and connecting them to the database using KQL queries.</li>
+          <li>Analyzed integration requests and their relevance to the current production step.</li>
+          <li>Collaborated with developers in order to ensure compliance with German, regional and international automotive standards.</li>
+        </ul>
+
+        <!-- Siemens Working Student -->
+        <h3>Siemens — Energy Infrastructure</h3>
+        <div class="row"><span class="muted">Working Student · Research and Simulation </span><span class="muted">Munich · 03/2025–Present</span></div>
+        <ul>
+          <li>Developed simulations of energy systems using <strong>Python</strong> libraries.</li>
+          <li>Analyzed and integrated data from various sources into simulation pipelines.</li>
+          <li>Collaborated on the development of simulations using <strong>GitHub</strong> for version control.</li>
+        </ul>
+
+
+        <!-- TUM Fuel Cell CFD Internship -->
+        <h3>Technical University of Munich — Chair of Materials Science</h3>
+        <div class="row"><span class="muted">Intern · Fuel Cell Electrodes CFD Simulation (OpenFOAM)</span><span class="muted">Munich · 10/2024–02/2025</span></div>
+        <ul>
+          <li>Developed advanced CFD models of fuel‑cell electrodes using <strong>OpenFOAM</strong>, focusing on transport phenomena and electrode performance.</li>
+          <li>Conducted detailed analysis of simulation results and sensitivity studies.</li>
+        </ul>
+
+        <!-- E.ON Drive Working Student -->
+        <h3>E.ON Drive — Finance & Performance</h3>
+        <div class="row"><span class="muted">Working Student · Data Analytics & Power BI</span><span class="muted">Munich · 07/2024–Present</span></div>
+        <ul>
+          <li>Analyzed e‑mobility market trends and internal KPIs to support decision‑making.</li>
+          <li>Designed interactive <strong>Power BI</strong> dashboards; transformed data via <strong>Power Query</strong> and <strong>DAX</strong>.</li>
+          <li>Performed data cleaning/validation with <strong>Python</strong> and <strong>SQL</strong>.</li>
+        </ul>
+
+        <!-- MAGNA -->
+        <h3>MAGNA Electronics — Process, Methods & Tools</h3>
+        <div class="row"><span class="muted">Working Student</span><span class="muted">Munich · 10/2023–04/2024</span></div>
+        <ul>
+          <li>Categorized engineering tools within <strong>A‑SPICE</strong> and optimized the tool portfolio to reduce costs.</li>
+          <li>Developed training materials in ReqMan; organized and delivered process training sessions.</li>
+        </ul>
+
+        <!-- Murex -->
+        <h3>Murex — Fintech Test Consultant</h3>
+        <div class="row"><span class="muted">Internship & Part‑time</span><span class="muted">Beirut · 04/2022–11/2022</span></div>
+        <ul>
+          <li>Analyzed failed tests and validated financial scenarios (incl. FX derivatives pricing) within agile teams.</li>
+          <li>Created new automated test cases to improve reliability.</li>
+        </ul>
+
+        <!-- MEA -->
+        <h3>Middle East Airlines (MASCO) — Airplane Maintenance Trainee</h3>
+        <div class="row"><span class="muted">Intern</span><span class="muted">Beirut · 12/2022–01/2023</span></div>
+        <ul>
+          <li>Participated in maintenance of Airbus aircraft systems across workshops and hangars.</li>
+        </ul>
+
+        <!-- AUB SA -->
+        <h3>American University of Beirut — Department of Mechanical Engineering </h3>
+        <div class="row"><span class="muted">Research Assistant · Materials Modeling & Simulation)</span><span class="muted">Beirut · 02/2021–02/2022</span></div>
+        <ul>
+          <li>Modeled phase changes and boundary formations in steel spheres; compared simulations with experimental data.</li>
+        </ul>
+
+        <h2>Projects</h2>
+        <h3>Optimization & Forecasting Lab</h3>
+        <ul>
+          <li>Applied machine‑learning and optimization algorithms in <strong>Python</strong> to energy problems.</li>
+        </ul>
+        <h3>Energy Systems Practical Lab</h3>
+        <ul>
+          <li>Hands‑on experiments: methanization, solar thermal, biomass gasification.</li>
+        </ul>
+        <h3>CFD Finite‑Volume Solver (2D)</h3>
+        <ul>
+          <li>Built a MATLAB FVM code for thermal‑fluids problems; validated on benchmark cases.</li>
+        </ul>
+        <h3>Robotic Arm Control</h3>
+        <ul>
+          <li>Designed controllers in MATLAB/Simulink based on specified performance criteria.</li>
+        </ul>
+        <h3>Temperature Alarm System</h3>
+        <ul>
+          <li>Implemented with LabVIEW, MyDAQ, sensors, and a motor.</li>
+        </ul>
+        <h3>Cooling Thermosiphon Design</h3>
+        <ul>
+          <li>Simulated and optimized thermosiphon heat transfer using finite‑difference methods.</li>
+        </ul>
+        <h3>Mechanical Simulation — Lifting Mechanism</h3>
+        <ul>
+          <li>Simulated motion sequences in Autodesk Inventor for a specified lift mechanism.</li>
+        </ul>
+      </section>
+
+      <!-- ===== Right column ===== -->
+      <section>
+        <h2>Education</h2>
+        <h3>Technical University of Munich (TUM) — M.Sc. Power Engineering</h3>
+        <div class="row"><span class="muted">Grade: 1.8</span><span class="muted">10/2023–Present · Munich</span></div>
+        <ul>
+          <li>Coursework spans electrical & mechanical engineering applications in the power industry. Masters thesis: Computational Fluid Dynamics of Fuel Cells</li>
+          <li>Masters thesis: Computational Fluid Dynamics of Fuel Cells</li>
+        </ul>
+
+        <h3>American University of Beirut — B.E. Mechanical Engineering</h3>
+        <div class="row"><span class="muted">GPA: 4.0/4.0 (≈ 1.0 German)</span><span class="muted">09/2019–06/2023 · Beirut</span></div>
+        <ul>
+          <li>FYP: Designed & built a solar humidity pump using a silica‑gel coated rotating belt.</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">MATLAB</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">DAX</span>
+          <span class="chip">Power Query</span>
+          <span class="chip">OpenFOAM</span>
+          <span class="chip">Aspen Plus</span>
+          <span class="chip">SolidWorks</span>
+          <span class="chip">AutoCAD</span>
+          <span class="chip">Simulink</span>
+          <span class="chip">LaTeX</span>
+          <span class="chip">Git</span>
+        </div>
+
+        <h2>Publications</h2>
+        <ul>
+          <li>Asghar Aryanfar, <strong>J. Jundi</strong>, S. Damadi, X. A. Goddard III (2022). "Real‑time Interface‑tracking Framework for the Evolution of the Phases during the Quenching of Steel Balls." <em>Materialia</em> 21, Article 101327. https://doi.org/10.1016/j.mtla.2022.101327</li>
+        </ul>
+
+        <h2>Languages</h2>
+        <ul>
+          <li>English (Advanced), German (B2), Arabic (Native)</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jihad.3@hotmail.com">jihad.3@hotmail.com</a></p>
+        <p>Phone: +49 15754803518</p>
+        <p>Location: Munich, Germany</p>
+      </section>
+    </div>
+
+    <footer>
+      <p>© Jihad Jundi — <span class="muted">Power Engineering Student @TUM.</span></p>
+    </footer>
+  </div>
+</body>
+</html>
